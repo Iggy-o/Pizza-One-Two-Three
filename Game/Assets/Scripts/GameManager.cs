@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic; 
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+
 public class GameManager : MonoBehaviour
 {
 	public static float timeNum;
 	public GameObject[] timeUI;
+	public TextMeshProUGUI timeText;
 	public Sprite[] spriteTexture;
 
 	public static float monNum;
@@ -109,6 +113,10 @@ public class GameManager : MonoBehaviour
 		if (monNum < WINMONEY)
 		{
 			timeNum = timeNum + Time.deltaTime;
+			int timeInt = (int)timeNum;
+			timeText.text = timeInt.ToString() + "s";
+
+			/*
 			if (timeNum < 10 && timeNum >= 0)
 			{
 				timeUI[0].GetComponent<Image>().sprite = spriteTexture[(int)timeNum];
@@ -136,7 +144,7 @@ public class GameManager : MonoBehaviour
 				timeUI[1].SetActive(true);
 				timeUI[2].SetActive(true);
 			}
-
+			*/
 		}
 		else //you win
 		{

@@ -7,6 +7,7 @@ public class toolControler : MonoBehaviour
 
     public Texture2D cursorHandPic;
     public Texture2D cursorForkPic;
+    public Texture2D cursorPizzaCutterPic;
 
     
     public KeyCode mouseLeft;
@@ -33,6 +34,11 @@ public class toolControler : MonoBehaviour
         {
             PaintPizza.toolType = "addStuff";
             Cursor.SetCursor(cursorHandPic, Vector2.zero, CursorMode.ForceSoftware);
+        }
+        if (gameObject.name == "cutter")
+        {
+            PaintPizza.toolType = "addStuff";
+            Cursor.SetCursor(cursorPizzaCutterPic, Vector2.zero, CursorMode.ForceSoftware);
         }
     }
 }
