@@ -2,15 +2,18 @@
 using UnityEngine.UI;
 using System.Collections.Generic; 
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
 	public static float timeNum;
 	public GameObject[] timeUI;
+	public TextMeshProUGUI timeText;
 	public Sprite[] spriteTexture;
 
 	public static float monNum;
 	public GameObject[] monUI;
+	public TextMeshProUGUI moneyText;
 	public Sprite[] spriteTextureMon;
 	public static int thisRoundMon;
 
@@ -72,34 +75,36 @@ public class GameManager : MonoBehaviour
 	}
 	public void ShowMoney(float monNums)
 	{
-		if (monNums < 10 && monNums >= 0)
-		{
-			monUI[0].GetComponent<Image>().sprite = spriteTextureMon[(int)monNums];
-			monUI[1].SetActive(false);
-			monUI[2].SetActive(false);
-		}
-		else if (monNums < 100 && monNums >= 10)
-		{
-			nuM0 = (int)(monNums / 10);
-			nuM1 = (int)(monNums % 10);
-			monUI[0].GetComponent<Image>().sprite = spriteTextureMon[nuM0];
-			monUI[1].GetComponent<Image>().sprite = spriteTextureMon[nuM1];
-			monUI[1].SetActive(true);
-			monUI[2].SetActive(false);
-		}
-		else if (monNums < 1000 && monNums >= 100)
-		{
-			nuM0 = (int)(monNums / 100);
-			nuM1 = (int)((monNums % 100) / 10);
-			nuM2 = (int)((monNums % 100) % 10);
-			monUI[0].GetComponent<Image>().sprite = spriteTextureMon[nuM0];
-			monUI[1].GetComponent<Image>().sprite = spriteTextureMon[nuM1];
-			monUI[2].GetComponent<Image>().sprite = spriteTextureMon[nuM2];
-			monUI[0].SetActive(true);
-			monUI[1].SetActive(true);
-			monUI[2].SetActive(true);
-		}
+		moneyText.text = monNums.ToString ();
 	}
+	// 	if (monNums < 10 && monNums >= 0)
+	// 	{
+	// 		monUI[0].GetComponent<Image>().sprite = spriteTextureMon[(int)monNums];
+	// 		monUI[1].SetActive(false);
+	// 		monUI[2].SetActive(false);
+	// 	}
+	// 	else if (monNums < 100 && monNums >= 10)
+	// 	{
+	// 		nuM0 = (int)(monNums / 10);
+	// 		nuM1 = (int)(monNums % 10);
+	// 		monUI[0].GetComponent<Image>().sprite = spriteTextureMon[nuM0];
+	// 		monUI[1].GetComponent<Image>().sprite = spriteTextureMon[nuM1];
+	// 		monUI[1].SetActive(true);
+	// 		monUI[2].SetActive(false);
+	// 	}
+	// 	else if (monNums < 1000 && monNums >= 100)
+	// 	{
+	// 		nuM0 = (int)(monNums / 100);
+	// 		nuM1 = (int)((monNums % 100) / 10);
+	// 		nuM2 = (int)((monNums % 100) % 10);
+	// 		monUI[0].GetComponent<Image>().sprite = spriteTextureMon[nuM0];
+	// 		monUI[1].GetComponent<Image>().sprite = spriteTextureMon[nuM1];
+	// 		monUI[2].GetComponent<Image>().sprite = spriteTextureMon[nuM2];
+	// 		monUI[0].SetActive(true);
+	// 		monUI[1].SetActive(true);
+	// 		monUI[2].SetActive(true);
+	// 	}
+	// }
 	void Start()
 	{
 		monNum += thisRoundMon;
@@ -115,34 +120,38 @@ public class GameManager : MonoBehaviour
 		// Add time to the clock if the game is running
 		if (monNum < WINMONEY && DayCustomerCheck.dayCount < WINDAYS)
 		{
+				if (monNum < WINMONEY)
+		{
 			timeNum = timeNum + Time.deltaTime;
-			if (timeNum < 10 && timeNum >= 0)
-			{
-				timeUI[0].GetComponent<Image>().sprite = spriteTexture[(int)timeNum];
-				timeUI[1].SetActive(false);
-				timeUI[2].SetActive(false);
-			}
-			else if (timeNum < 100 && timeNum >= 10)
-			{
-				num0 = (int)(timeNum / 10);
-				num1 = (int)(timeNum % 10);
-				timeUI[0].GetComponent<Image>().sprite = spriteTexture[num0];
-				timeUI[1].GetComponent<Image>().sprite = spriteTexture[num1];
-				timeUI[1].SetActive(true);
-				timeUI[2].SetActive(false);
-			}
-			else if (timeNum < 1000 && timeNum >= 100)
-			{
-				num0 = (int)(timeNum / 100);
-				num1 = (int)((timeNum % 100) / 10);
-				num2 = (int)((timeNum % 100) % 10);
-				timeUI[0].GetComponent<Image>().sprite = spriteTexture[num0];
-				timeUI[1].GetComponent<Image>().sprite = spriteTexture[num1];
-				timeUI[2].GetComponent<Image>().sprite = spriteTexture[num2];
-				timeUI[0].SetActive(true);
-				timeUI[1].SetActive(true);
-				timeUI[2].SetActive(true);
-			}
+			int timeInt = (int)timeNum;
+			timeText.text = timeInt.ToString() + "s";
+		}
+			// {
+			// 	timeUI[0].GetComponent<Image>().sprite = spriteTexture[(int)timeNum];
+			// 	timeUI[1].SetActive(false);
+			// 	timeUI[2].SetActive(false);
+			// }
+			// else if (timeNum < 100 && timeNum >= 10)
+			// {
+			// 	num0 = (int)(timeNum / 10);
+			// 	num1 = (int)(timeNum % 10);
+			// 	timeUI[0].GetComponent<Image>().sprite = spriteTexture[num0];
+			// 	timeUI[1].GetComponent<Image>().sprite = spriteTexture[num1];
+			// 	timeUI[1].SetActive(true);
+			// 	timeUI[2].SetActive(false);
+			// }
+			// else if (timeNum < 1000 && timeNum >= 100)
+			// {
+			// 	num0 = (int)(timeNum / 100);
+			// 	num1 = (int)((timeNum % 100) / 10);
+			// 	num2 = (int)((timeNum % 100) % 10);
+			// 	timeUI[0].GetComponent<Image>().sprite = spriteTexture[num0];
+			// 	timeUI[1].GetComponent<Image>().sprite = spriteTexture[num1];
+			// 	timeUI[2].GetComponent<Image>().sprite = spriteTexture[num2];
+			// 	timeUI[0].SetActive(true);
+			// 	timeUI[1].SetActive(true);
+			// 	timeUI[2].SetActive(true);
+			// }
 
 		}
 		else if (monNum >= WINMONEY && DayCustomerCheck.playerHasFinished == false || DayCustomerCheck.dayCount >= WINDAYS && monNum >= 900 && DayCustomerCheck.playerHasFinished == false){ //WINMONEY == 2200
