@@ -21480,11 +21480,11 @@ PrefabInstance:
     - target: {fileID: 7236189649854884258, guid: 2a32e8610b4f26f4d949220ba10d269f, type: 3}
       propertyPath: winSound
       value: 
-      objectReference: {fileID: 8300000, guid: 88adacef350947a4284d584971b51bdb, type: 3}
+      objectReference: {fileID: 8300000, guid: ba64d8784f26ef047a9ef8cf71e6fedb, type: 3}
     - target: {fileID: 7236189649854884258, guid: 2a32e8610b4f26f4d949220ba10d269f, type: 3}
       propertyPath: loseSound
       value: 
-      objectReference: {fileID: 8300000, guid: 3fe91e8b36cf05342921c0c8809932a7, type: 3}
+      objectReference: {fileID: 8300000, guid: 7bb1802c0802975458405b78fb681be3, type: 3}
     - target: {fileID: 7236189649854884258, guid: 2a32e8610b4f26f4d949220ba10d269f, type: 3}
       propertyPath: monUI.Array.data[0]
       value: 

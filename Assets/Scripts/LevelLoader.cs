@@ -82,6 +82,7 @@ public class LevelLoader : MonoBehaviour {
 		DayCustomerCheck.custCount = 0; 
         SceneManager.LoadScene("Start Screen");
     }
+
 	
     public void QuitGame()
     {

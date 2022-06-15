@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 42236611}
   - component: {fileID: 42236614}
   m_Layer: 5
-  m_Name: Looks Yummy
+  m_Name: ToOvenButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -471,6 +471,18 @@ MonoBehaviour:
       - m_Target: {fileID: 42236614}
         m_TargetAssemblyTypeName: TopToCut, Assembly-CSharp
         m_MethodName: StartToCut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1833919989}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: TimerStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2441,7 +2453,7 @@ PrefabInstance:
     - target: {fileID: 3559308929346189075, guid: 2daab64c880b875468f6f97d5a7e7f96, type: 3}
       propertyPath: addingSound
       value: 
-      objectReference: {fileID: 8300000, guid: 2c508375d8dd7f04c8e5a1879ca9d259, type: 3}
+      objectReference: {fileID: 8300000, guid: dd51a13a1a739b2409b06f70b19f3435, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2daab64c880b875468f6f97d5a7e7f96, type: 3}
 --- !u!1 &756704896
@@ -3260,6 +3272,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 362607689747815868, guid: 7e12967e47ca29140a7bba0d5c237d49, type: 3}
+        m_TargetAssemblyTypeName: CheckOut, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1246017604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3974,7 +3998,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -4671,6 +4695,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8633719605165113953, guid: 0468bdf1bd88f74419f8cd4459fa1953, type: 3}
   m_PrefabInstance: {fileID: 1803551227}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1833919989 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 938342887144289139, guid: 9beca33474eaacf4d935816f06fedc32, type: 3}
+  m_PrefabInstance: {fileID: 163630764}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aea6963a3f0f034187667a57fb6c2d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1914004768
 GameObject:
   m_ObjectHideFlags: 0

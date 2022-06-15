@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 	public Sprite[] spriteTextureMon;
 	public static int thisRoundMon;
 
-
+	public bool timerStart = false;
 
 	public GameObject[] orderUI;
 	//public GameObject[] progressUI;
@@ -116,11 +116,12 @@ public class GameManager : MonoBehaviour
 		WinCheck();
 	}
 
+
 	void WinCheck(){
 		// Add time to the clock if the game is running
 		if (monNum < WINMONEY && DayCustomerCheck.dayCount < WINDAYS)
 		{
-				if (monNum < WINMONEY)
+				if (monNum < WINMONEY &&timerStart)
 		{
 			timeNum = timeNum + Time.deltaTime;
 			int timeInt = (int)timeNum;
@@ -166,7 +167,10 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-		
 
+	public void TimerStart()
+	{
+		timerStart = true;
+	}
 }
 
