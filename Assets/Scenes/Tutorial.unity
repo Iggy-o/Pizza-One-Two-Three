@@ -255,6 +255,7 @@ MonoBehaviour:
   textSpeed: 0.05
   customerAnimator: {fileID: 523191095}
   playerAnimator: {fileID: 7878918360129498459}
+  continueButton: {fileID: 0}
   BGPic: []
 --- !u!114 &217458567
 MonoBehaviour:
@@ -269,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.5254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -327,6 +328,7 @@ MonoBehaviour:
   customerAnimator: {fileID: 523191095}
   playerAnimator: {fileID: 7878918360129498459}
   StartBG: {fileID: 1046731061}
+  goButton: {fileID: 1796663575}
   RegisterBG: {fileID: 235017799}
   KithcenBG: {fileID: 448413275}
   ingredientTable: {fileID: 242880879}
@@ -924,7 +926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1073049582
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1233,7 +1235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: -1.448}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -196.2, y: 13.871}
+  m_AnchoredPosition: {x: -197.1, y: 18.5}
   m_SizeDelta: {x: 111.1202, y: 96.1309}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1476145539
@@ -1951,12 +1953,12 @@ GameObject:
   - component: {fileID: 1796663578}
   - component: {fileID: 1796663577}
   m_Layer: 5
-  m_Name: Continue
+  m_Name: Go
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1796663576
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2111,7 +2113,7 @@ RectTransform:
   m_GameObject: {fileID: 1981036421}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 2.4249, z: 1}
+  m_LocalScale: {x: 1.0104258, y: 2.1248188, z: 0.87625}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 217458565}
@@ -2144,15 +2146,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+  m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2179,7 +2181,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -2205,7 +2207,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 30.463959, y: 0, z: 4.852661, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

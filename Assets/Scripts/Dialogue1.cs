@@ -13,9 +13,9 @@ public class Dialogue1 : MonoBehaviour
     public static bool conversationOver = false;
 
     public GameObject StartBG;
+    public GameObject goButton;
     public GameObject RegisterBG;
     public GameObject KithcenBG;
-
     public GameObject ingredientTable;
     public GameObject hand;
     public GameObject fork;
@@ -36,43 +36,7 @@ public class Dialogue1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        if (textComponent.text == lines[index] && talkOder != 3) //means this sentense has been run completely
-        {
-            playerAnimator.SetBool("StillTalking", false); //stop talking animation
-        }
-        if (textComponent.text != lines[index] && talkOder != 3)
-        {
-            playerAnimator.SetBool("StillTalking", true);
-        }
-        
-
-     
-        if (textComponent.text == lines[index] && talkOder == 3) //means this sentense has been run completely
-        {
-            customerAnimator.SetBool("StillTalking", false); //stop talking animation
-        }
-        if (textComponent.text != lines[index] && talkOder == 3)
-        {
-            customerAnimator.SetBool("StillTalking", true);
-        }
-        
-
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            
-            if (textComponent.text == lines[index]) //means this sentense has been run completely
-            {
-                NextLine();
-                talkOder++;
-            }
-            else 
-            {
-                StopAllCoroutines();
-                textComponent.text = lines[index]; //instantly fill out the words in the sentense
-            }
-        }
+        Sentence();
     }
 
     void StartDialogue()
@@ -130,11 +94,51 @@ public class Dialogue1 : MonoBehaviour
                 fork.SetActive(false);
             }
         }
-        else 
+        else
+        {
+            gameObject.SetActive(false);
+            goButton.SetActive(true);
+            conversationOver = true;
+        }
+    }
+
+    public void Sentence()
+    {
+        if (textComponent.text == lines[index] && talkOder != 3) //means this sentense has been run completely
+        {
+            playerAnimator.SetBool("StillTalking", false); //stop talking animation
+        }
+        if (textComponent.text != lines[index] && talkOder != 3)
+        {
+            playerAnimator.SetBool("StillTalking", true);
+        }
+
+
+
+        if (textComponent.text == lines[index] && talkOder == 3) //means this sentense has been run completely
+        {
+            customerAnimator.SetBool("StillTalking", false); //stop talking animation
+        }
+        if (textComponent.text != lines[index] && talkOder == 3)
+        {
+            customerAnimator.SetBool("StillTalking", true);
+        }
+
+
+
+        if (Input.GetMouseButtonDown(0))
         {
 
-            gameObject.SetActive(false);
-            conversationOver = true;
+            if (textComponent.text == lines[index]) //means this sentense has been run completely
+            {
+                NextLine();
+                talkOder++;
+            }
+            else
+            {
+                StopAllCoroutines();
+                textComponent.text = lines[index]; //instantly fill out the words in the sentense
+            }
         }
     }
 }
