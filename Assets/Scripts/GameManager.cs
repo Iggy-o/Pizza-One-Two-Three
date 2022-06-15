@@ -34,8 +34,6 @@ public class GameManager : MonoBehaviour
 	private const int WINMONEY = 900;
 	private const int WINDAYS = 7;
 
-	private bool playerHasFinished = false;
-
 	private int nuM0;
 	private int nuM1;
 	private int nuM2;
