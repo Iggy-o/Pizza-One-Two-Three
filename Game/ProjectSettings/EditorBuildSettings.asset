@@ -6,12 +6,26 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Start Screen.unity
+    guid: 219bf10d3f4fcd647a288a91a519eaef
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/Counter.unity
     guid: 0d60a4d97652c1349a8bedebd440f7e9
   - enabled: 1
     path: Assets/Scenes/Pizza Cutting.unity
     guid: 42884e529418ca34b8eefe1cffe8e84e
+=======
+    path: Assets/Scenes/Tutorial.unity
+    guid: 415395f13ddd4994daf7d604c4be5330
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 038451c74c8856e48a387d997f9b4ae9
+  - enabled: 1
+    path: Assets/Scenes/Level 1_Kitchen.unity
+    guid: 887b5e0598c1e5741bd4e1160c348d99
+  - enabled: 1
+    path: Assets/Scenes/Level 1-Check.unity
+    guid: 25ea6c7fdf6cd1b4b907f555001a1bc9
+>>>>>>> 40ef3631f577624fd1c689736404833127ac8f6b
   m_configObjects: {}
