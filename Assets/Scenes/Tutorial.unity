@@ -245,11 +245,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1981036423}
   lines:
-  - Welcome to your brand pizza shop. Click anywhere to start.
-  - 'This is the register, here you will take instruction from your manager Susan.
-    Each customer has a unique order, so pay close attention to what they want. '
-  - "It\u2019s not going to be easy! You will show your talent at math and making
-    pizza."
+  - Welcome to your brand pizza shop!  Click anywhere to start.
+  - 'This is the register, here you will take instruction from your manager, Susan.
+    Each customer has a unique order. Pay close attention to what the customer is
+    asking for. '
+  - 'It will not be easy! You will need to show your talent at math and making pizza. '
   - ' I would like to have a "Surprise Me Pizza" sliced to 4 portions!'
   - ' I would like to have a "Surprise Me Pizza" sliced to 4 portions!'
   textSpeed: 0.05
@@ -309,21 +309,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1981036423}
   lines:
-  - Welcome to your brand pizza shop. Click anywhere to start.
-  - This is the tutorial section. I will introduce the scene and what we do as a
-    SUPER PIZZA GUY!
-  - This is the register, here you will take instruction from your manager Susan.
-    Each customer has a unique order, so pay close attention to what they want.
-  - "It\u2019s not going to be easy! You will show your talent at math and making
-    pizza. "
+  - Welcome to your brand pizza shop!  Click anywhere to start.
+  - 'This is the tutorial section. I will introduce your role as a SUPER PIZZA GUY.  '
+  - 'This is the register, here you will take instruction from your manager, Susan.
+    Each customer has a unique order. Pay close attention to what the customer is
+    asking for. '
+  - 'It will not be easy! You will need to show your talent at math and making pizza. '
   - Sure! Like a piece of cake!
-  - This is the kitchen where we decorate and slice the pizza.
-  - You can click on the hand and then select the ingredient you want to add to the
-    pizza or you can click on the fork to remove ingredient on it.
-  - Once you finish adding toppings. Click "Looks Yummy" to slice the pizza!
-  - Once you finish slicing, click complete and see how much tips you can get from
-    the customer!
-  - Congrats! You have finished the tutorila! Click "Go!!!" to start your challenge!
+  - "This is the kitchen. Here you\u2019ll decorate and slice the pizzas."
+  - 'You can click on the hand and then select the ingredient you want to add to
+    the pizza. If you want to remove the toppings, use the fork. '
+  - 'Once you finish adding toppings. Click "Looks Yummy" to slice the pizza! Once
+    you finish slicing, click complete and receive your tips. The more accurate your
+    pizza is to the order, the more tips you will get. '
+  - 'You will need to collect $900 in your first 7 days of work. '
+  - Congrats! You have finished the tutorial! Click "Go!!!" to start your challenge!
   textSpeed: 0.047
   customerAnimator: {fileID: 523191095}
   playerAnimator: {fileID: 7878918360129498459}
