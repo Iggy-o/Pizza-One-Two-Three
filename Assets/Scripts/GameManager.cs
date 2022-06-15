@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
 	public GameObject win;
 	public GameObject backButton;
 	
-	private const int WINMONEY = 300;
+	private const int WINMONEY = 900;
 	private const int WINDAYS = 7;
 
 	private bool playerHasFinished = false;
