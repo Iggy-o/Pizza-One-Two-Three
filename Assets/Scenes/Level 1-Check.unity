@@ -5249,7 +5249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &665281162
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21770,6 +21770,18 @@ PrefabInstance:
       propertyPath: loseSound
       value: 
       objectReference: {fileID: 8300000, guid: 7bb1802c0802975458405b78fb681be3, type: 3}
+    - target: {fileID: 7236189649854884258, guid: 2a32e8610b4f26f4d949220ba10d269f, type: 3}
+      propertyPath: NextButtom
+      value: 
+      objectReference: {fileID: 665281161}
+    - target: {fileID: 7236189649854884258, guid: 2a32e8610b4f26f4d949220ba10d269f, type: 3}
+      propertyPath: nextButtom
+      value: 
+      objectReference: {fileID: 665281161}
+    - target: {fileID: 7236189649854884258, guid: 2a32e8610b4f26f4d949220ba10d269f, type: 3}
+      propertyPath: resultButtom
+      value: 
+      objectReference: {fileID: 1796663575}
     - target: {fileID: 7236189649854884258, guid: 2a32e8610b4f26f4d949220ba10d269f, type: 3}
       propertyPath: monUI.Array.data[0]
       value: 

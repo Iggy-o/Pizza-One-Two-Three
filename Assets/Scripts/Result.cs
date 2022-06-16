@@ -14,7 +14,9 @@ public class Result : MonoBehaviour
 	public GameObject win;
 	public AudioClip loseSound;
 	public AudioClip winSound;
-	
+
+	public GameObject resultButtom;
+	public GameObject nextButtom;
 
 	public GameObject[] monUI;
 	public Sprite[] spriteTextureMon;
@@ -55,7 +57,9 @@ public class Result : MonoBehaviour
 	}
 	public void GetResult()
     {
-        resMon=GameManager.thisRoundMon;
+		nextButtom.SetActive(true);
+		
+		resMon =GameManager.thisRoundMon;
 		Debug.Log(resMon);
 		ShowMoney(resMon);
 		if (CheckOut.correctOrNot==false)
@@ -68,7 +72,7 @@ public class Result : MonoBehaviour
 			win.SetActive(true);
 			win.GetComponent<AudioSource>().PlayOneShot(winSound);
 		}
-
+		resultButtom.SetActive(false);
 		//GameManager.monNum = 0; //Reset money to 0
 	}
 
