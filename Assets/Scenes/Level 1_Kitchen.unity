@@ -1237,6 +1237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 938342887144289140, guid: 9beca33474eaacf4d935816f06fedc32, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9beca33474eaacf4d935816f06fedc32, type: 3}
 --- !u!1001 &171758546
@@ -3408,7 +3412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9811321, g: 0.5127803, b: 0.5127803, a: 0.91764706}
+  m_Color: {r: 0.9811321, g: 0.5127803, b: 0.5127803, a: 0.8509804}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

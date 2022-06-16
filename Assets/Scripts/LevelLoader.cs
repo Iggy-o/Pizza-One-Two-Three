@@ -5,12 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour {
 
-    [SerializeField] int timeToWait = 4;
     int currentSceneIndex;
 
 
-
-	// Use this for initialization
 	void Start () {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 	}

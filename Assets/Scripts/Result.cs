@@ -73,7 +73,7 @@ public class Result : MonoBehaviour
 			win.GetComponent<AudioSource>().PlayOneShot(winSound);
 		}
 		resultButtom.SetActive(false);
-		//GameManager.monNum = 0; //Reset money to 0
+		//GameManager.monNum = 0; //Reset money to 
 	}
 
 	
