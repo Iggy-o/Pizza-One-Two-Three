@@ -75,6 +75,11 @@ public class LevelLoader : MonoBehaviour {
         SceneManager.LoadScene("Lose Screen");
     }
 
+    public void ResetCursor()
+    {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto); //change the cursor to default arrow
+    }
+
     public void RestartGame(){
         GameManager.monNum = 0;
 		GameManager.thisRoundMon = 0;
@@ -82,7 +87,6 @@ public class LevelLoader : MonoBehaviour {
 		DayCustomerCheck.custCount = 0; 
         SceneManager.LoadScene("Start Screen");
     }
-
 	
     public void QuitGame()
     {
