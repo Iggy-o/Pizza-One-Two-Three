@@ -245,7 +245,7 @@ MonoBehaviour:
   textComponent: {fileID: 1981036423}
   lines:
   - Hi, Susan! How's the shop today? Busy?
-  - "2.\tYes! It's Friday, so many people want pizza! I need 100% of your focus today!!"
+  - Yes! It's Friday, so many people want pizza! I need 100% of your focus today!!
   - Sure! As always!!!
   textSpeed: 0.05
   customerAnimator: {fileID: 1867498774}
