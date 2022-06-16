@@ -5,6 +5,7 @@ using UnityEngine;
 public class SliceStuff : MonoBehaviour
 {
     public static string statusCut = "no";
+    public AudioClip cutSound;
     SpriteRenderer renderer ;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class SliceStuff : MonoBehaviour
         {
             gameObject.name = "sliced";
             renderer.color = new Color(0f, 0f, 0f, 1f);
+            gameObject.GetComponent<AudioSource>().PlayOneShot(cutSound);
             Slice.cutChoiceNum++;
             statusCut = "yes";
             //Debug.Log("it's been changed to yes");

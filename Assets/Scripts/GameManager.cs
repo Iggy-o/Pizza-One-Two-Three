@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 	//public GameObject[] progressUI;
 	public int[] orderparentNum;
 	public int[] orderchildNum;
-	public static int[] answer= { 0,0,0,0,0,0,0};
+	public static int[] answer= { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 	public Sprite[] spriteTextureOrder;
 	public static int orderIndex;
 
@@ -48,16 +48,40 @@ public class GameManager : MonoBehaviour
 	
 	public void OrderAndProgress()
 	{
-		if (orderIndex >= 6)
+		orderIndex=Random.Range(0,21);
+
+		if (orderparentNum[orderIndex]<10 && orderparentNum[orderIndex] >= 0) //orderNum[orderIndex] < 10 && orderNum[orderIndex] >= 0
 		{
-			orderIndex = 0;
+			
+			orderUI[0].SetActive(false); //parent fraction 10
+			orderUI[1].GetComponent<Image>().sprite = spriteTextureOrder[orderparentNum[orderIndex] % 10]; //parent fraction <10
+
 		}
+
+		else if (orderparentNum[orderIndex] >= 10) //orderNum[orderIndex] < 10 && orderNum[orderIndex] >= 0
+		{
+
+			orderUI[0].GetComponent<Image>().sprite = spriteTextureOrder[1]; //parent fraction 10 (it will only be 1 here)
+			orderUI[1].GetComponent<Image>().sprite = spriteTextureOrder[orderparentNum[orderIndex]%10]; //parent fraction <10
+		}
+
+
+		if (orderchildNum[orderIndex] < 10 && orderchildNum[orderIndex] >= 0) //orderNum[orderIndex] < 10 && orderNum[orderIndex] >= 0
+		{
+
+			orderUI[2].SetActive(false); //parent fraction 10
+			orderUI[3].GetComponent<Image>().sprite = spriteTextureOrder[orderchildNum[orderIndex] % 10]; //parent fraction <10
+
+		}
+
+		else if (orderchildNum[orderIndex] >= 10) //orderNum[orderIndex] < 10 && orderNum[orderIndex] >= 0
+		{
+
+			orderUI[2].GetComponent<Image>().sprite = spriteTextureOrder[1]; //child fraction 10 (it will only be 1 here)
+			orderUI[3].GetComponent<Image>().sprite = spriteTextureOrder[orderchildNum[orderIndex] % 10]; //child fraction <10
+		}
+
 		
-		if (true) //orderNum[orderIndex] < 10 && orderNum[orderIndex] >= 0
-		{
-			orderUI[0].GetComponent<Image>().sprite = spriteTextureOrder[orderparentNum[orderIndex]]; //parent fraction
-			orderUI[1].GetComponent<Image>().sprite = spriteTextureOrder[orderchildNum[orderIndex]]; //child fraction
-		}
 		for (int i = 0; i < orderparentNum.Length; i++)
 		{
 			answer[i] = (orderchildNum[i] * 360 / orderparentNum[i]);
@@ -73,6 +97,7 @@ public class GameManager : MonoBehaviour
 		//	orderUI[1].GetComponent<Image>().sprite = spriteTextureMon[numOrder1];
 		//}
 	}
+
 	public void ShowMoney(float monNums)
 	{
 		moneyText.text = monNums.ToString ();

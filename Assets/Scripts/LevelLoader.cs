@@ -49,6 +49,11 @@ public class LevelLoader : MonoBehaviour {
 
     public void LoadUpScene()
     {
+        ToppingCounter.cheese = 0;
+        ToppingCounter.olives = 0;
+        ToppingCounter.tomato = 0;
+        ToppingCounter.pesto = 0;
+        
         if (DayCustomerCheck.custCount == DayCustomerCheck.dayCount){
             DayCustomerCheck.custCount = 0;
             DayCustomerCheck.dayCount++;
@@ -63,7 +68,6 @@ public class LevelLoader : MonoBehaviour {
         }
         else Debug.Log("Error: Load next scene not working");
     }
-
 
     public void NextQuestion()
     {

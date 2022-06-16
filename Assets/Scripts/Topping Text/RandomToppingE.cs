@@ -18,7 +18,6 @@ public class RandomToppingE : MonoBehaviour
         string[] toppings2 = new string[] { "Cheese", "Olives" };
         string randomTopping2 = toppings2[Random.Range(0, toppings2.Length)];
         toppingtextvar2 = randomTopping2;
-
     }
 
 

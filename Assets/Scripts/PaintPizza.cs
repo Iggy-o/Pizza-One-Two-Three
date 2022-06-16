@@ -26,6 +26,19 @@ public class PaintPizza : MonoBehaviour
         {
             Instantiate(thingsToPut, objPosition, thingsToPut.rotation);
             gameObject.GetComponent<AudioSource>().PlayOneShot(addingSound);
+
+            if (thingsToPut.name == "GreenSauce 1"){
+                ToppingCounter.pesto++;
+            }
+            else if (thingsToPut.name == "OliveSouce"){
+                ToppingCounter.olives++;
+            }
+            else if (thingsToPut.name == "CheeseSauce 1"){
+                ToppingCounter.cheese++;
+            }
+            else if (thingsToPut.name == "TomatoSouce"){
+                ToppingCounter.tomato++;
+            }
         }
 
     }
