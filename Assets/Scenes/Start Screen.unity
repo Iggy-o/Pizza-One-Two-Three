@@ -295,7 +295,7 @@ RectTransform:
   m_GameObject: {fileID: 72896115}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.49622995, y: 0.49622995, z: 0.49622995}
+  m_LocalScale: {x: 0.49623, y: 0.7380925, z: 0.49623}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 294856834}
@@ -1726,7 +1726,7 @@ RectTransform:
   m_GameObject: {fileID: 1076714499}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.49623, y: 0.49623, z: 0.49623}
+  m_LocalScale: {x: 0.49623, y: 0.73809254, z: 0.49623}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 234772220}
@@ -4423,7 +4423,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7886707329653873384}
   m_Layer: 0
-  m_Name: RegUI
+  m_Name: RegUI (Deprecated)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
