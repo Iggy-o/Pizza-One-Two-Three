@@ -144,9 +144,7 @@ public class GameManager : MonoBehaviour
 
 	void WinCheck(){
 		// Add time to the clock if the game is running
-		if (monNum < WINMONEY && DayCustomerCheck.dayCount < WINDAYS)
-		{
-				if (monNum < WINMONEY &&timerStart)
+		if (monNum < WINMONEY && timerStart || DayCustomerCheck.playerHasFinished == true && timerStart)
 		{
 			timeNum = timeNum + Time.deltaTime;
 			int timeInt = (int)timeNum;
@@ -179,8 +177,7 @@ public class GameManager : MonoBehaviour
 			// 	timeUI[2].SetActive(true);
 			// }
 
-		}
-		else if (monNum >= WINMONEY && DayCustomerCheck.playerHasFinished == false || DayCustomerCheck.dayCount >= WINDAYS && monNum >= 900 && DayCustomerCheck.playerHasFinished == false){ //WINMONEY == 2200
+		if (monNum >= WINMONEY && DayCustomerCheck.playerHasFinished == false || DayCustomerCheck.dayCount >= WINDAYS && monNum >= 900 && DayCustomerCheck.playerHasFinished == false){ //WINMONEY == 2200
 			win.SetActive(true);
 			DayCustomerCheck.playerHasFinished = true;
 			SceneManager.LoadScene("Game Win Screen");

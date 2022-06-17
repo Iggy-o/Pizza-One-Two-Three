@@ -1897,27 +1897,27 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: ef0236ac711ffb24c817a05b30fd6d11, type: 3}
     - target: {fileID: 593352997344424562, guid: e1eeaf72e345a6f4f89db0034f36d890, type: 3}
       propertyPath: m_Size.x
-      value: 0.69939995
+      value: 0.81531066
       objectReference: {fileID: 0}
     - target: {fileID: 593352997344424562, guid: e1eeaf72e345a6f4f89db0034f36d890, type: 3}
       propertyPath: m_Size.y
-      value: 0.72432923
+      value: 1.0692401
       objectReference: {fileID: 0}
     - target: {fileID: 593352997344424562, guid: e1eeaf72e345a6f4f89db0034f36d890, type: 3}
       propertyPath: m_Offset.x
-      value: 0.015294611
+      value: -0.042660743
       objectReference: {fileID: 0}
     - target: {fileID: 593352997344424562, guid: e1eeaf72e345a6f4f89db0034f36d890, type: 3}
       propertyPath: m_Offset.y
-      value: -0.012144387
+      value: -0.059177756
       objectReference: {fileID: 0}
     - target: {fileID: 593352997344424562, guid: e1eeaf72e345a6f4f89db0034f36d890, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.92
+      value: 0.78
       objectReference: {fileID: 0}
     - target: {fileID: 593352997344424562, guid: e1eeaf72e345a6f4f89db0034f36d890, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.89
+      value: 0.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1eeaf72e345a6f4f89db0034f36d890, type: 3}
@@ -1942,11 +1942,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9021146496440779745, guid: dc606222cd79e344ca14467bab0c59cd, type: 3}
       propertyPath: m_LocalScale.x
-      value: 86.668816
+      value: 118.04292
       objectReference: {fileID: 0}
     - target: {fileID: 9021146496440779745, guid: dc606222cd79e344ca14467bab0c59cd, type: 3}
       propertyPath: m_LocalScale.y
-      value: 64.56103
+      value: 67.47919
       objectReference: {fileID: 0}
     - target: {fileID: 9021146496440779745, guid: dc606222cd79e344ca14467bab0c59cd, type: 3}
       propertyPath: m_LocalScale.z
@@ -1954,11 +1954,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9021146496440779745, guid: dc606222cd79e344ca14467bab0c59cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 850.1
+      value: 843.3555
       objectReference: {fileID: 0}
     - target: {fileID: 9021146496440779745, guid: dc606222cd79e344ca14467bab0c59cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 64
+      value: 63.0365
       objectReference: {fileID: 0}
     - target: {fileID: 9021146496440779745, guid: dc606222cd79e344ca14467bab0c59cd, type: 3}
       propertyPath: m_LocalPosition.z
