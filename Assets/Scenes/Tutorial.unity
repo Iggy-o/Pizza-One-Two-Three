@@ -245,10 +245,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1981036423}
   lines:
-  - Welcome to your brand pizza shop!  Click anywhere to start.
-  - 'This is the register, here you will take instruction from your manager, Susan.
-    Each customer has a unique order. Pay close attention to what the customer is
-    asking for. '
+  - Welcome to your brand new pizza shop!  Click anywhere to start.
+  - This is the register, here you will take instructions from your manager, Susan.
+    Each customer has a unique order.
   - 'It will not be easy! You will need to show your talent at math and making pizza. '
   - ' I would like to have a "Surprise Me Pizza" sliced to 4 portions!'
   - ' I would like to have a "Surprise Me Pizza" sliced to 4 portions!'
@@ -309,19 +308,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1981036423}
   lines:
-  - Welcome to your brand pizza shop!  Click anywhere to start.
-  - 'This is the tutorial section. I will introduce your role as a SUPER PIZZA GUY.  '
-  - 'This is the register, here you will take instruction from your manager, Susan.
-    Each customer has a unique order. Pay close attention to what the customer is
-    asking for. '
+  - Welcome to your brand new pizza shop!  Click anywhere to start.
+  - 'This is the tutorial section. I will introduce you to your role as a SUPER PIZZA
+    GUY.  '
+  - This is the register, here you will take instructions from your manager, Susan.
+    Each customer has a unique order.
   - 'It will not be easy! You will need to show your talent at math and making pizza. '
-  - Sure! Like a piece of cake!
+  - Sure! Piece of cake!
   - "This is the kitchen. Here you\u2019ll decorate and slice the pizzas."
   - 'You can click on the hand and then select the ingredient you want to add to
     the pizza. If you want to remove the toppings, use the fork. '
-  - 'Once you finish adding toppings. Click "Looks Yummy" to slice the pizza! Once
-    you finish slicing, click complete and receive your tips. The more accurate your
-    pizza is to the order, the more tips you will get. '
+  - Once you finish adding toppings. Click "Looks Yummy" to slice the pizza! Once
+    you finish slicing, click complete and receive your tips.
   - 'You will need to collect $900 in your first 7 days of work. '
   - Congrats! You have finished the tutorial! Click "Go!!!" to start your challenge!
   textSpeed: 0.047

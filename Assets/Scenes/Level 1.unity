@@ -317,9 +317,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 1981036423}
   lines:
-  - Hi, Susan! How's the shop today? Busy?
-  - "2.\tYes! It's Friday, so many people want pizza! I need 100% of your focus today!!"
-  - Sure! As always!!!
+  - Hey Susan! How is it today? Busy?
+  - 'It''s been pretty busy, everyone wants to buy a pizza! I need you to give it
+    your all and really make those pizzas perfect! '
+  - Of course I always do!
   textSpeed: 0.05
   customerAnimator: {fileID: 1867498774}
   playerAnimator: {fileID: 1321847994}
