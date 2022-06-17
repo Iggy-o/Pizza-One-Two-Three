@@ -5,17 +5,6 @@ using UnityEngine;
 public class CheckOut : MonoBehaviour
 {
     public static bool correctOrNot;	
-	// Start is called before the first frame update
-	void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public bool CheckCorrectness()
     {
@@ -110,10 +99,6 @@ public class CheckOut : MonoBehaviour
                 GameManager.thisRoundMon += 100;
             }
         }
-        
-
 		GameManager.timeNum = 0;
-
-
 	}
 }
