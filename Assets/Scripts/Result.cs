@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Result : MonoBehaviour
 {
@@ -14,7 +15,10 @@ public class Result : MonoBehaviour
 	public GameObject win;
 	public AudioClip loseSound;
 	public AudioClip winSound;
-	
+
+	public TextMeshProUGUI moneyText;
+	public GameObject resultButtom;
+	public GameObject nextButtom;
 
 	public GameObject[] monUI;
 	public Sprite[] spriteTextureMon;
@@ -25,37 +29,40 @@ public class Result : MonoBehaviour
   //  }
     public void ShowMoney(float monNums)
 	{
-		if (monNums < 10 && monNums >= 0)
-		{
-			monUI[0].GetComponent<Image>().sprite = spriteTextureMon[(int)monNums];
-			monUI[1].SetActive(false);
-			monUI[2].SetActive(false);
-		}
-		else if (monNums < 100 && monNums >= 10)
-		{
-			nuM0 = (int)(monNums / 10);
-			nuM1 = (int)(monNums % 10);
-			monUI[0].GetComponent<Image>().sprite = spriteTextureMon[nuM0];
-			monUI[1].GetComponent<Image>().sprite = spriteTextureMon[nuM1];
-			monUI[1].SetActive(true);
-			monUI[2].SetActive(false);
-		}
-		else if (monNums < 1000 && monNums >= 100)
-		{
-			nuM0 = (int)(monNums / 100);
-			nuM1 = (int)((monNums % 100) / 10);
-			nuM2 = (int)((monNums % 100) % 10);
-			monUI[0].GetComponent<Image>().sprite = spriteTextureMon[nuM0];
-			monUI[1].GetComponent<Image>().sprite = spriteTextureMon[nuM1];
-			monUI[2].GetComponent<Image>().sprite = spriteTextureMon[nuM2];
-			monUI[0].SetActive(true);
-			monUI[1].SetActive(true);
-			monUI[2].SetActive(true);
-		}
+		moneyText.text = monNums.ToString();
+		//if (monNums < 10 && monNums >= 0)
+		//{
+		//	monUI[0].GetComponent<Image>().sprite = spriteTextureMon[(int)monNums];
+		//	monUI[1].SetActive(false);
+		//	monUI[2].SetActive(false);
+		//}
+		//else if (monNums < 100 && monNums >= 10)
+		//{
+		//	nuM0 = (int)(monNums / 10);
+		//	nuM1 = (int)(monNums % 10);
+		//	monUI[0].GetComponent<Image>().sprite = spriteTextureMon[nuM0];
+		//	monUI[1].GetComponent<Image>().sprite = spriteTextureMon[nuM1];
+		//	monUI[1].SetActive(true);
+		//	monUI[2].SetActive(false);
+		//}
+		//else if (monNums < 1000 && monNums >= 100)
+		//{
+		//	nuM0 = (int)(monNums / 100);
+		//	nuM1 = (int)((monNums % 100) / 10);
+		//	nuM2 = (int)((monNums % 100) % 10);
+		//	monUI[0].GetComponent<Image>().sprite = spriteTextureMon[nuM0];
+		//	monUI[1].GetComponent<Image>().sprite = spriteTextureMon[nuM1];
+		//	monUI[2].GetComponent<Image>().sprite = spriteTextureMon[nuM2];
+		//	monUI[0].SetActive(true);
+		//	monUI[1].SetActive(true);
+		//	monUI[2].SetActive(true);
+		//}
 	}
 	public void GetResult()
     {
-        resMon=GameManager.thisRoundMon;
+		nextButtom.SetActive(true);
+		
+		resMon =GameManager.thisRoundMon;
 		Debug.Log(resMon);
 		ShowMoney(resMon);
 		if (CheckOut.correctOrNot==false)
@@ -68,8 +75,8 @@ public class Result : MonoBehaviour
 			win.SetActive(true);
 			win.GetComponent<AudioSource>().PlayOneShot(winSound);
 		}
-
-		//GameManager.monNum = 0; //Reset money to 0
+		resultButtom.SetActive(false);
+		//GameManager.monNum = 0; //Reset money to 
 	}
 
 	
