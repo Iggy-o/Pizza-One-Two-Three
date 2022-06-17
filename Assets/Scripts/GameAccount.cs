@@ -25,18 +25,27 @@ public class GameAccount
     }
     public void Set_ach()
     {
-        if(score < 30)
+        if (score < 15)
         {
-            ach = "Bad";            
-        } else if(score < 80)
+            ach = "Bad";
+        }
+        else if (score < 30)
         {
             ach = "Good";
         }
-        else
+        else if (score < 80)
+        {
+            ach = "Great";
+        }
+        else if (score < 100)
         {
             ach = "Excellent";
         }
-        
+        else
+        {
+            ach = "Mastered";
+        }
+
     }
    
 
