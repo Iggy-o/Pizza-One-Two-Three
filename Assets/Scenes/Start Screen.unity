@@ -245,12 +245,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 19824698}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -959.99994, y: -362.12656, z: 0}
-  m_LocalScale: {x: 2.4303796, y: 2.4303796, z: 2.4303796}
+  m_LocalPosition: {x: 0.000030517578, y: 19.855713, z: 0}
+  m_LocalScale: {x: 0.7839662, y: 0.7839662, z: 0.7839662}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1073619122}
-  m_RootOrder: 7
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &19824701
 MonoBehaviour:
@@ -265,6 +265,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicPlayer: {fileID: 19824698}
+  mute: {fileID: 0}
+  muted: {fileID: 0}
 --- !u!1 &94478830
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,18 +434,6 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 170708997}
-        m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
-        m_MethodName: SetAsFirstSibling
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1527,7 +1517,6 @@ RectTransform:
   - {fileID: 1511261793}
   - {fileID: 7886707329653873384}
   - {fileID: 1700263804}
-  - {fileID: 19824700}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3167,18 +3156,6 @@ MonoBehaviour:
       - m_Target: {fileID: 19824701}
         m_TargetAssemblyTypeName: BGmusic, Assembly-CSharp
         m_MethodName: muteButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1881300287}
-        m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
-        m_MethodName: SetAsFirstSibling
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

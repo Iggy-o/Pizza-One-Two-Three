@@ -10661,18 +10661,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 842636140}
-        m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
-        m_MethodName: SetAsFirstSibling
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &842636142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10742,6 +10730,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicPlayer: {fileID: 927209952}
+  mute: {fileID: 0}
+  muted: {fileID: 0}
 --- !u!82 &927209954
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22091,18 +22081,6 @@ MonoBehaviour:
       - m_Target: {fileID: 927209953}
         m_TargetAssemblyTypeName: BGmusic, Assembly-CSharp
         m_MethodName: muteButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2127508755}
-        m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
-        m_MethodName: SetAsFirstSibling
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
