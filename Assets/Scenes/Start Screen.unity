@@ -612,10 +612,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alertText: {fileID: 8822264683729415497}
-  signupButton: {fileID: 270197270}
+  signupButton: {fileID: 1311352391}
   updateButton: {fileID: 0}
-  usernameInputField: {fileID: 6763248457779566975}
-  emailInputField: {fileID: 2811849493876447511}
+  usernameInputField: {fileID: 976086343}
+  emailInputField: {fileID: 1235963043}
 --- !u!1 &270197266
 GameObject:
   m_ObjectHideFlags: 0
@@ -3035,7 +3035,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1700263805}
+      - m_Target: {fileID: 267737796}
         m_TargetAssemblyTypeName: Reg, Assembly-CSharp
         m_MethodName: OnRegisterClick
         m_Mode: 1
