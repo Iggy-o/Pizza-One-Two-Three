@@ -315,7 +315,9 @@ MonoBehaviour:
     Each customer has a unique order.
   - 'It will not be easy! You will need to show your talent at math and making pizza. '
   - Sure! Piece of cake!
-  - "This is the kitchen. Here you\u2019ll decorate and slice the pizzas."
+  - "This is the kitchen. Here you\u2019ll decorate and slice the pizzas.  To cut
+    the correct fractions, count the number of pieces of the fraction out of the
+    total!"
   - 'You can click on the hand and then select the ingredient you want to add to
     the pizza. If you want to remove the toppings, use the fork. '
   - Once you finish adding toppings. Click "Looks Yummy" to slice the pizza! Once
