@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour {
 
     int currentSceneIndex;
+    public CheckOut cashier;
 
 
 	void Start () {
@@ -56,6 +57,21 @@ public class LevelLoader : MonoBehaviour {
             Debug.Log("dayCount is " + DayCustomerCheck.dayCount + "----------------------------------------------------------------------------------------------");
         }
         else Debug.Log("Error: Load next scene not working");
+    }
+
+    public void cutterCheck(){
+        GameObject textFraction = GameObject.Find("Incorrect Fraction Text");
+        bool correctFraction;
+        correctFraction = cashier.CheckCorrectness();
+
+        if (correctFraction){
+            LoadNextScene();
+            cashier.CheckOutMoney(GameManager.timeNum);
+            ResetCursor();
+        }
+        else if (correctFraction == false){
+            textFraction.GetComponent<TMPro.TextMeshProUGUI>().text = "Incorrect Fraction!";
+        }
     }
 
     public void NextQuestion()

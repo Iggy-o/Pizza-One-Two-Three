@@ -14,8 +14,7 @@ public class Reg : MonoBehaviour
     [SerializeField] private Button signupButton;
     [SerializeField] private Button updateButton;
     [SerializeField] private TMP_InputField usernameInputField;
-    [SerializeField] private TMP_InputField emailInputField;
-
+    [SerializeField] private TMP_InputField emailInputField;    
 
     // Updates User info of Database -> moves to the next stage
     public void OnUpdateClick()
@@ -74,7 +73,7 @@ public class Reg : MonoBehaviour
     // Creates new User account -> moves to the next scene
     public void OnRegisterClick()
     {
-        alertText.text = "Registering....";
+        alertText.text = "Logging in....";
         signupButton.interactable = false;
         StartCoroutine(Registering());
     }
@@ -90,7 +89,6 @@ public class Reg : MonoBehaviour
             signupButton.interactable = true;
             yield break;
         }
-
 
         if (username.Length < 1)
         {
@@ -124,9 +122,8 @@ public class Reg : MonoBehaviour
 
         }
 
-        if (request.result == UnityWebRequest.Result.Success)
-        {
-            Debug.Log("hey");
+        if (request.result == UnityWebRequest.Result.Success)        {
+            
             if (request.downloadHandler.text != "Invalid credentials" && request.downloadHandler.text != "Already created.")
             {
                 alertText.text = "Welcome";
@@ -139,7 +136,7 @@ public class Reg : MonoBehaviour
             }
             else if (request.downloadHandler.text == "Already created.")
             {
-                alertText.text = "the email already exists";
+                alertText.text = "The email already exists";
                 signupButton.interactable = true;
                 Debug.Log($"try new {email} !");
 
@@ -161,5 +158,5 @@ public class Reg : MonoBehaviour
 
         yield return null;
     }
-
+   
 }
