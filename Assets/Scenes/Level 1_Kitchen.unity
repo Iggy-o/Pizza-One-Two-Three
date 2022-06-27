@@ -376,7 +376,7 @@ RectTransform:
   m_GameObject: {fileID: 38622502}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 176.12054, y: 77.84333, z: 77.84333}
+  m_LocalScale: {x: 207.25865, y: 91.60603, z: 91.60603}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1632012121}
@@ -1861,7 +1861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 593352997344424556, guid: e1eeaf72e345a6f4f89db0034f36d890, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 788
+      value: 804
       objectReference: {fileID: 0}
     - target: {fileID: 593352997344424556, guid: e1eeaf72e345a6f4f89db0034f36d890, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1978,7 +1978,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9021146496440779745, guid: dc606222cd79e344ca14467bab0c59cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 843.3555
+      value: 859.3555
       objectReference: {fileID: 0}
     - target: {fileID: 9021146496440779745, guid: dc606222cd79e344ca14467bab0c59cd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2943,8 +2943,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 6.5593, y: 3.7667}
+  m_SizeDelta: {x: 104.0527, y: 111.9764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &667090619
 MonoBehaviour:
@@ -4040,7 +4040,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
