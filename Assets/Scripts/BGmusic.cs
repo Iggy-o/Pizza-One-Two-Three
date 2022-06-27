@@ -45,4 +45,12 @@ public class BGmusic : MonoBehaviour
             muted.transform.SetAsFirstSibling();
         }
     }
+
+    public static void playSoundEffect(AudioClip soundEffect){
+        GameObject soundEffectPlayer = new GameObject();
+        soundEffectPlayer.AddComponent<AudioSource>();
+        if (pause == false){
+            soundEffectPlayer.GetComponent<AudioSource>().PlayOneShot(soundEffect);
+        }
+    }
 }

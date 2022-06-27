@@ -25,7 +25,7 @@ public class SliceStuff : MonoBehaviour
         {
             gameObject.name = "sliced";
             renderer.color = new Color(0f, 0f, 0f, 1f);
-            gameObject.GetComponent<AudioSource>().PlayOneShot(cutSound);
+            BGmusic.playSoundEffect(cutSound);
             Slice.cutChoiceNum++;
             statusCut = "yes";
             //Debug.Log("it's been changed to yes");

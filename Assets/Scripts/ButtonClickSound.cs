@@ -19,6 +19,6 @@ public class ButtonClickSound : MonoBehaviour
 
     public void ClickSound()
     {
-        gameObject.GetComponent<AudioSource>().PlayOneShot(clickSound);        
+        BGmusic.playSoundEffect(clickSound);       
     }
 }

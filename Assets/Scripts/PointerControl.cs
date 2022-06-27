@@ -5,6 +5,7 @@ using UnityEngine;
 public class PointerControl : MonoBehaviour
 {
     public AudioClip removeSound;
+    public BGmusic AudioPlayer;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,8 +34,10 @@ public class PointerControl : MonoBehaviour
             else if (gameObject.transform.name == "TomatoSouce(Clone)"){
                 ToppingCounter.tomato--;
             }
+            
+            BGmusic.playSoundEffect(removeSound);
 
-            gameObject.GetComponent<AudioSource>().PlayOneShot(removeSound);
+            //gameObject.GetComponent<AudioSource>().PlayOneShot(removeSound);
             Destroy(gameObject,0.4f);
             
         }

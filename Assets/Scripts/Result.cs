@@ -28,15 +28,15 @@ public class Result : MonoBehaviour
 		resMon =GameManager.thisRoundMon;
 		Debug.Log(resMon);
 		ShowMoney(resMon);
-		if (CheckOut.correctOrNot==false)
+		if (CheckOut.correctTopping == false)
 		{
 			lose.SetActive(true);
-			lose.GetComponent<AudioSource>().PlayOneShot(loseSound);
+			BGmusic.playSoundEffect(loseSound);
 		}
-		if (CheckOut.correctOrNot == true)
+		if (CheckOut.correctTopping == true)
 		{
 			win.SetActive(true);
-			win.GetComponent<AudioSource>().PlayOneShot(winSound);
+			BGmusic.playSoundEffect(winSound);
 		}
 		resultButtom.SetActive(false);
 	}	

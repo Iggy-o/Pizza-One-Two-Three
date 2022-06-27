@@ -3043,6 +3043,10 @@ PrefabInstance:
       propertyPath: addingSound
       value: 
       objectReference: {fileID: 8300000, guid: dd51a13a1a739b2409b06f70b19f3435, type: 3}
+    - target: {fileID: 3559308929346189075, guid: 2daab64c880b875468f6f97d5a7e7f96, type: 3}
+      propertyPath: audioPlayer
+      value: 
+      objectReference: {fileID: 893196584}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2daab64c880b875468f6f97d5a7e7f96, type: 3}
 --- !u!1 &756704896

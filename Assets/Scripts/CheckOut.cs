@@ -5,6 +5,7 @@ using UnityEngine;
 public class CheckOut : MonoBehaviour
 {
     public static bool correctOrNot;	
+    public static bool correctTopping;
 
     public bool CheckCorrectness()
     {
@@ -41,6 +42,7 @@ public class CheckOut : MonoBehaviour
         }
         else correct = false;
 
+        correctTopping = correct;
         return correct;
     }
 

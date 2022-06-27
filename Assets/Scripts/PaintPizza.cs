@@ -25,7 +25,8 @@ public class PaintPizza : MonoBehaviour
         if (Input.GetKey(mouseLeft) && toolType == "addStuff" && PaintPizzaBoundry.inPaintableZone) //a single click 
         {
             Instantiate(thingsToPut, objPosition, thingsToPut.rotation);
-            gameObject.GetComponent<AudioSource>().PlayOneShot(addingSound);
+            //gameObject.GetComponent<AudioSource>().PlayOneShot(addingSound);
+            BGmusic.playSoundEffect(addingSound);
 
             if (thingsToPut.name == "GreenSauce 1"){
                 ToppingCounter.pesto++;
