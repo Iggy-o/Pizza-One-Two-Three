@@ -70,7 +70,13 @@ public class LevelLoader : MonoBehaviour {
             ResetCursor();
         }
         else if (correctFraction == false){
-            textFraction.GetComponent<TMPro.TextMeshProUGUI>().text = "Incorrect Fraction!";
+            cashier.setWinConditions();
+            if (cashier.playerCut > cashier.gameCut){
+                textFraction.GetComponent<TMPro.TextMeshProUGUI>().text = "Incorrect Fraction! Try a smaller fraction!";
+            }
+            else if (cashier.playerCut < cashier.gameCut){
+                textFraction.GetComponent<TMPro.TextMeshProUGUI>().text = "Incorrect Fraction! Try a larger fraction!";
+            }
         }
     }
 

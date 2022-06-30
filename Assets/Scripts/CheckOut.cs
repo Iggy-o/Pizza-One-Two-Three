@@ -6,9 +6,18 @@ public class CheckOut : MonoBehaviour
 {
     public static bool correctOrNot;	
     public static bool correctTopping;
+    public float playerCut;
+    public float gameCut;
+
+    public void setWinConditions(){
+        playerCut = Slice.cutChoicePortion * 30;
+        gameCut = GameManager.answer[GameManager.orderIndex];
+    }
 
     public bool CheckCorrectness()
     {
+
+        
         if (Slice.cutChoicePortion * 30 == GameManager.answer[GameManager.orderIndex])
         {
             correctOrNot = true;

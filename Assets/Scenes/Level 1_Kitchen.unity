@@ -3213,6 +3213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050ee04927f5d41498276a5993befa87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCut: 0
+  gameCut: 0
 --- !u!4 &759711216
 Transform:
   m_ObjectHideFlags: 0
