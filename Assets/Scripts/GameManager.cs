@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 	public GameObject[] orderUI;
 	public int[] orderparentNum;
 	public int[] orderchildNum;
+	public string[] hintText;
 	public static int[] answer= { 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
 	public TextMeshProUGUI parentText;
 	public TextMeshProUGUI childText;
@@ -87,6 +88,11 @@ public class GameManager : MonoBehaviour
 	void Update()
 	{
 		WinCheck();
+	}
+
+	public void printHint(){
+		GameObject textFraction = GameObject.Find("Hint Text");
+		textFraction.GetComponent<TMPro.TextMeshProUGUI>().text = hintText[orderIndex];
 	}
 
 	void WinCheck(){
