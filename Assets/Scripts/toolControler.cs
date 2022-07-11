@@ -14,6 +14,7 @@ public class toolControler : MonoBehaviour
 
 
     public KeyCode mouseLeft;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,10 @@ public class toolControler : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void resetImage(){
+        sprite.color = new Color(1,1, 1, 1);
     }
 
     private void OnMouseDown()

@@ -5,10 +5,11 @@ using TMPro;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Text.RegularExpressions;
 
 public class Reg : MonoBehaviour
 {   // backend app server URL
-    private string regEndPoint = "https://pizzaone-node-app.herokuapp.com/reg"; // "localhost:24567/reg";
+    private string regEndPoint = "https://pizzaone-node-app.herokuapp.com/reg";
     // objects for registration
     [SerializeField] private TextMeshProUGUI alertText;
     [SerializeField] private Button signupButton;
@@ -19,6 +20,29 @@ public class Reg : MonoBehaviour
     [SerializeField] private Button signinButton;
     [SerializeField] private TMP_InputField usernameInputField2;
     [SerializeField] private TMP_InputField emailInputField2;
+
+    public static bool IsValidEmail(string email)
+    {
+        Regex validateEmailRegex = new Regex("(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])");
+        return validateEmailRegex.IsMatch(email);
+    }
+    public static bool IsValidEmailspecial(string email)
+    {   if(email[0] == '.'|| email[0] =='-'|| email[0] == '_')
+        {
+            return false;
+        }
+        for (int i = 0; i < email.Length -1 ; i++)
+        {
+            if (email.Substring(i, 2) == "._" || email.Substring(i, 2) == ".." || email.Substring(i, 2) == "__" ||
+                email.Substring(i, 2) == "_." || email.Substring(i, 2) == "-_" || email.Substring(i, 2) == "_-" ||
+                email.Substring(i, 2) == ".-" || email.Substring(i, 2) == "-." || email.Substring(i, 2) == "--")
+            { 
+                
+            return false;
+            }
+        }
+        return true;
+    }
 
     // Updates User info of Database -> moves to the next stage
     public void OnUpdateClick()
@@ -102,12 +126,13 @@ public class Reg : MonoBehaviour
             yield break;
         }
 
-        if (email.Length < 2)
+        if (!IsValidEmail(email) || !IsValidEmailspecial(email))
         {
             alertText.text = "Invalid email";
             signupButton.interactable = true;
             yield break;
         }
+
         GameAccount newAccount = new GameAccount(username, email);
 
         UnityWebRequest request = UnityWebRequest.Get($"{regEndPoint}?username={newAccount.username}&email={newAccount.email}&level_score={newAccount.score}&level_ach={newAccount.ach}&stage={newAccount.stage}&new_one={newA}");
@@ -136,7 +161,7 @@ public class Reg : MonoBehaviour
                 signupButton.interactable = true;
                 Debug.Log($"old user!");
             }
-            else if (request.downloadHandler.text != "Invalid credentials" && request.downloadHandler.text != "Already created." && request.downloadHandler.text != "Invalid address.")
+            else if (request.downloadHandler.text != "Invalid credentials" && request.downloadHandler.text != "Already created.")
             {
                 alertText.text = "Welcome! " + username;
                 signupButton.interactable = false;
@@ -156,7 +181,7 @@ public class Reg : MonoBehaviour
             else
             {
                 Debug.Log("no");
-                alertText.text = "Incorrect email";
+                alertText.text = "Invalid Credentials";
                 signupButton.interactable = true;
 
             }
