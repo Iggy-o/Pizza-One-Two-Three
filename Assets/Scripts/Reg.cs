@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class Reg : MonoBehaviour
 {   // backend app server URL
-    private string regEndPoint = "https://pizzaone-node-app.herokuapp.com/reg";
+    private string regEndPoint = "https://pizzaone-node-app.herokuapp.com/reg"; // "localhost:24567/reg";
     // objects for registration
     [SerializeField] private TextMeshProUGUI alertText;
     [SerializeField] private Button signupButton;
@@ -136,7 +136,7 @@ public class Reg : MonoBehaviour
                 signupButton.interactable = true;
                 Debug.Log($"old user!");
             }
-            else if (request.downloadHandler.text != "Invalid credentials" && request.downloadHandler.text != "Already created.")
+            else if (request.downloadHandler.text != "Invalid credentials" && request.downloadHandler.text != "Already created." && request.downloadHandler.text != "Invalid address.")
             {
                 alertText.text = "Welcome! " + username;
                 signupButton.interactable = false;
@@ -156,7 +156,7 @@ public class Reg : MonoBehaviour
             else
             {
                 Debug.Log("no");
-                alertText.text = "Invalid Credentials";
+                alertText.text = "Incorrect email";
                 signupButton.interactable = true;
 
             }
