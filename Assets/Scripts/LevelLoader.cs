@@ -32,6 +32,25 @@ public class LevelLoader : MonoBehaviour {
         SceneManager.LoadScene("Options Screen");
     }
 
+    public void LoadTutorialKitchen(){
+        SceneManager.LoadScene("Tutorial Kitchen");
+    }
+
+    public void LoadUpSceneMainGame()
+    {
+        ToppingCounter.cheese = 0;
+        ToppingCounter.olives = 0;
+        ToppingCounter.tomato = 0;
+        ToppingCounter.pesto = 0;
+
+        SceneManager.LoadScene("Level 1_Kitchen");
+        NextQuestion();
+
+
+        //public static string randomTopping = "Tomato Sauce";
+        RandomToppingDisplay.toppingtextvar = "Tomato Sauce";
+    }
+
     public void LoadNextScene()
     {
         SceneManager.LoadScene(currentSceneIndex + 1);

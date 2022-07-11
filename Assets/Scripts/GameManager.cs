@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
 		orderIndex=Random.Range(0,21);
 		parentText.text = orderparentNum[orderIndex].ToString();
 		childText.text = orderchildNum[orderIndex].ToString();
+
         if (orderparentNum[orderIndex] < 10 && orderparentNum[orderIndex] >= 0) //the answer figure (parent)
         {
             orderUI[0].SetActive(false); //parent fraction 10

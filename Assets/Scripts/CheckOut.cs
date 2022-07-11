@@ -49,6 +49,9 @@ public class CheckOut : MonoBehaviour
         else if (RandomToppingE.toppingtextvar2 == "Olives" && ToppingCounter.olives > 0 && ToppingCounter.cheese == 0){
             correct = true;
         }
+        else if (RandomToppingDisplay.toppingtextvar == "Tomato Sauce" && RandomToppingE.toppingtextvar2 != "Olives" && RandomToppingE.toppingtextvar2 != "Cheese" && ToppingCounter.tomato > 0 && ToppingCounter.pesto == 0 && ToppingCounter.olives == 0 && ToppingCounter.cheese == 0){
+            correct = true;
+        }
         else correct = false;
 
         correctTopping = correct;

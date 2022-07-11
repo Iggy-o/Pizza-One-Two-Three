@@ -7,8 +7,14 @@ public class tutorial : MonoBehaviour
     public GameObject[] prompts;
     private int currentPrompt = 0;
 
+    public void nextTextBox(){
+        prompts[currentPrompt].SetActive(false);
+        prompts[++currentPrompt].SetActive(true);
+    }
+
+    /*
     // Update is called once per frame
-    public void onMouseOver()
+    public void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0) && currentPrompt < 6) {
             prompts[currentPrompt].SetActive(false);
@@ -17,4 +23,5 @@ public class tutorial : MonoBehaviour
             prompts[currentPrompt].SetActive(false);
         }
     }
+    */
 }
