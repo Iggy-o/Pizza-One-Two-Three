@@ -5,17 +5,16 @@ using UnityEngine;
 public class tutorial : MonoBehaviour
 {
     public GameObject[] prompts;
-    private int promptNum = 0;
-    public KeyCode mouseLeft;
+    private int currentPrompt = 0;
 
     // Update is called once per frame
-    void Update()
+    public void onMouseOver()
     {
-        if (Input.GetMouseButtonDown(0) && promptNum < 6) {
-            prompts[promptNum].SetActive(false);
-            prompts[++promptNum].SetActive(true);
+        if (Input.GetMouseButtonDown(0) && currentPrompt < 6) {
+            prompts[currentPrompt].SetActive(false);
+            prompts[++currentPrompt].SetActive(true);
         } else if(Input.GetMouseButtonDown(0)) {
-            prompts[promptNum].SetActive(false);
+            prompts[currentPrompt].SetActive(false);
         }
     }
 }
