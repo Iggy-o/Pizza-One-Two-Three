@@ -7,6 +7,7 @@ public class LevelLoader : MonoBehaviour {
 
     int currentSceneIndex;
     public CheckOut cashier;
+    public GameObject HintButton;
 
 
 	void Start () {
@@ -90,12 +91,14 @@ public class LevelLoader : MonoBehaviour {
         }
         else if (correctFraction == false){
             cashier.setWinConditions();
+            HintButton.SetActive(true);
             if (cashier.playerCut > cashier.gameCut){
                 textFraction.GetComponent<TMPro.TextMeshProUGUI>().text = "Incorrect Fraction! Try a smaller fraction!";
             }
             else if (cashier.playerCut < cashier.gameCut){
                 textFraction.GetComponent<TMPro.TextMeshProUGUI>().text = "Incorrect Fraction! Try a larger fraction!";
             }
+
         }
     }
 
