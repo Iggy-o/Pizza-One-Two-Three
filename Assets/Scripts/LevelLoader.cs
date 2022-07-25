@@ -37,6 +37,10 @@ public class LevelLoader : MonoBehaviour {
         SceneManager.LoadScene("Tutorial Kitchen");
     }
 
+    public void LoadTutorialScene(){
+        SceneManager.LoadScene("Tutorial");
+    }
+
     public void LoadUpSceneMainGame()
     {
         ToppingCounter.cheese = 0;
